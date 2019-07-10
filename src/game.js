@@ -6,7 +6,17 @@ import "./game.scss";
 class Game extends Component{
     state = {
         board: null,
+        timer: 0
     };
+
+
+    // loading = () => {
+    //     console.log("poszło");
+    //     setInterval(() => (
+    //         this.setState(() => ({timer: this.state.timer + 1}))
+    //     ), 1000)
+    // };
+
     componentDidMount() {
         this.setState({board: genBoard()});
     };
@@ -29,13 +39,17 @@ class Game extends Component{
         if (!cell)
             return null;
 
-        const boardStateBeforeOpen = this.state.board.state;
+        const boardStateBeforeOpen = this.state.board._state;
 
         this.state.board.openCell(cell.x,cell.y);
         console.log("Click");
+        console.log(boardStateBeforeOpen);
+        console.log(this.state.board.state);
         this.setState(this.reRender(), () => {
-            if (boardStateBeforeOpen === 0 && this.state.board.state === 1) {
-                // create timer
+            if (boardStateBeforeOpen === 0 && this.state.board._state === 1) {
+                setInterval(() => (
+                    this.setState(() => ({timer: this.state.timer + 1}))
+                ), 1000)
             }
         })
     };
@@ -58,7 +72,7 @@ class Game extends Component{
                 <div className="headBox">
                 <h1 className="score">Mines<span>{this.state.board._numMines}</span></h1>
                 <img className="avatar" src={require("./img/smile.svg")}/>
-                <h1 className="timer">Time<span> 00:00</span></h1>
+                <h1 className="timer">Time<span>{this.state.timer}</span></h1>
                 </div>
                 <Board board={this.state.board} onCellOpened={this.onCellOpened} onCycleCellFlag={this.onCycleCellFlag}/>
             </div>
