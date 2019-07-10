@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+
+.gameView {
+  width: 500px;
+  height: 580px;
+  background-color: #d3d3d3;
+  margin: 100px auto;
+}
+
+.headBox {
+  width: 400px;
+  height: 80px;
+  margin: auto;
+  border-top: solid 5px #737373;
+  border-left: solid 5px #737373;
+  border-right: solid 5px #f2f2f2;
+  border-bottom: solid 5px #f2f2f2;
+  display: flex;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  color: red;
+}
+
+.score {
+  font-size: 30px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.timer {
+  font-size: 30px;
+  display: inline-block;
+  margin: 10px;
+}

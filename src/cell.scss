@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+.cellClosed {
+  width: 40px;
+  height: 40px;
+  border-top: solid 3px #f2f2f2;
+  border-left: solid 3px #f2f2f2;
+  border-right: solid 3px #737373;
+  border-bottom: solid 3px #737373;
+  background-color: #d3d3d3;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.cellOpened {
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #737373;
+  background-color: #d3d3d3;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.bombImg {
+  width: 30px;
+  height: 30px;
+}
+
+.bomb {
+  background-color: red;
+}
