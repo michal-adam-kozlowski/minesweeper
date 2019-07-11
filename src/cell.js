@@ -88,6 +88,13 @@ function Cell(props) {
             </div>
         )
     }
+    if ((props.cellData.isMine === true) && (props.gameState === 2)){
+        return (
+            <div className={"cellOpened"}>
+                <img className="bombImg" src={require("./img/bomb.svg")}/>
+            </div>
+        )
+    }
     return (
     <div className={"cellClosed"} onClick={() => props.onCellOpened(props.cellData)} onContextMenu={(e)=>{e.preventDefault(); props.onCycleCellFlag(props.cellData)}}>
 

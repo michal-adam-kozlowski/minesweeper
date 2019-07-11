@@ -18,7 +18,7 @@ class Board extends Component{
             {this.props.board.grid().map((rowArr) =>
                     <div className={"row"}>
                         {rowArr.map((cell) =>
-                            <Cell cellData={cell} onCellOpened={this.props.onCellOpened} onCycleCellFlag={this.props.onCycleCellFlag}/>
+                            <Cell cellData={cell} gameState={this.props.gameState} onCellOpened={this.props.onCellOpened} onCycleCellFlag={this.props.onCycleCellFlag} showBomb={this.props.showBomb}/>
                         )}
                     </div>
                 )}

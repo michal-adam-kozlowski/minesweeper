@@ -2,16 +2,15 @@
 
 
 .gameView {
-  width: 500px;
-  height: 580px;
   background-color: #d3d3d3;
-  margin: 100px auto;
+  padding: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .headBox {
-  width: 400px;
   height: 80px;
-  margin: auto;
   border-top: solid 5px #737373;
   border-left: solid 5px #737373;
   border-right: solid 5px #f2f2f2;
@@ -24,7 +23,6 @@
 
 .score {
   font-size: 30px;
-  display: inline-block;
   margin: 10px;
 }
 
@@ -36,6 +34,5 @@
 
 .timer {
   font-size: 30px;
-  display: inline-block;
   margin: 10px;
 }
