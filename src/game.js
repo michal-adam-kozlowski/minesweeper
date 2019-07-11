@@ -128,7 +128,8 @@ class Game extends Component{
             return null;
         return (
             <div className="gameView">
-                <button onClick={() => this.setState({ newMenuOpen: true })}>New Game</button>
+                <button onMouseEnter={() => this.setState({ newMenuOpen: true })}
+                        onMouseLeave={() => this.setState({ newMenuOpen: false })}>New Game</button>
                 { this.state.newMenuOpen ? this.newGameMenu() : null }
                 <div className="headBox">
                 <h1 className="score">Mines <span>{this.state.minesCounter}</span></h1>
